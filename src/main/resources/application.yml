@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 spring:
 
   datasource:
@@ -15,3 +16,37 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+=======
+server:
+  port: 8081
+
+spring:
+  application:
+    name: AuthService
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:h2:mem:authdb
+    username: sa
+    password:
+
+# Configurações do JWT
+app:
+  jwt:
+    # Segredo para assinar o token. Em produção, use uma string longa e complexa e guarde-a de forma segura.
+    secret: "4z6B8E(H+MbQeThWmZq4t7w!z%C*F-JaNdRgUjXn2r5u8x/A?D(G+KbPeShVmYp3"
+    # Tempo de expiração do token de acesso (em milissegundos). 3600000 ms = 1 hora
+    expiration-ms: 3600000
+    # Tempo de expiração do token de refresh (em milissegundos). 86400000 ms = 24 horas
+    refresh-expiration-ms: 86400000
+>>>>>>> 71be097 (Feat: Iniciando api de autenticação.)

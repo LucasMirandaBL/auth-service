@@ -1,0 +1,14 @@
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\security\JwtTokenProvider.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\LoginRequest.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\security\UserDetailsServiceImpl.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\AuthServiceApplication.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\RegistroRequest.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\model\Usuario.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\config\SecurityConfig.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\JwtAuthenticationResponse.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\RefreshTokenRequest.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\controller\AuthController.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\service\UsuarioService.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\repository\UsuarioRepository.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\model\Role.java
+D:\Documentos\WorkSpace\AppProdutos\auth-service\src\main\java\br\com\fabreum\authservice\security\JwtAuthenticationFilter.java
