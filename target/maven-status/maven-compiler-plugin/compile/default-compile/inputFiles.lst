@@ -1,0 +1,14 @@
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\LoginRequest.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\RegistroRequest.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\controller\AuthController.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\model\Usuario.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\config\SecurityConfig.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\AuthServiceApplication.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\security\JwtAuthenticationFilter.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\security\UserDetailsServiceImpl.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\service\UsuarioService.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\security\JwtTokenProvider.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\model\Role.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\repository\UsuarioRepository.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\JwtAuthenticationResponse.java
+D:\Documents\Workspace\AppProdutos_Lucas\auth-service\src\main\java\br\com\fabreum\authservice\controller\dto\RefreshTokenRequest.java

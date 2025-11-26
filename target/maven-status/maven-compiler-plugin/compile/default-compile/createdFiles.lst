@@ -1,0 +1,14 @@
+br\com\fabreum\authservice\model\Usuario.class
+br\com\fabreum\authservice\controller\dto\LoginRequest.class
+br\com\fabreum\authservice\controller\dto\RegistroRequest.class
+br\com\fabreum\authservice\controller\dto\RefreshTokenRequest.class
+br\com\fabreum\authservice\security\JwtAuthenticationFilter.class
+br\com\fabreum\authservice\security\UserDetailsServiceImpl.class
+br\com\fabreum\authservice\controller\dto\JwtAuthenticationResponse.class
+br\com\fabreum\authservice\config\SecurityConfig.class
+br\com\fabreum\authservice\security\JwtTokenProvider.class
+br\com\fabreum\authservice\service\UsuarioService.class
+br\com\fabreum\authservice\controller\AuthController.class
+br\com\fabreum\authservice\AuthServiceApplication.class
+br\com\fabreum\authservice\model\Role.class
+br\com\fabreum\authservice\repository\UsuarioRepository.class
