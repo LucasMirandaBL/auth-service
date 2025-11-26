@@ -13,6 +13,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -24,23 +25,25 @@ public class AuthController {
     private final JwtTokenProvider tokenProvider;
     private final UsuarioService usuarioService;
 
+
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody RegistroRequest registroRequest) {
         try {
             Usuario usuario = usuarioService.registrarUsuario(registroRequest);
-            usuario.setPassword(null); // Never return password
+            usuario.setPassword(null);
             return ResponseEntity.ok(usuario);
         } catch (IllegalStateException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
+
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
 
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        loginRequest.getUsername(),
+                        loginRequest.getEmail(),
                         loginRequest.getPassword()
                 )
         );
@@ -74,4 +77,14 @@ public class AuthController {
         }
         return ResponseEntity.status(401).body("Usuário não autenticado.");
     }
+
+    @GetMapping("/users/by-username/{username}")
+    public ResponseEntity<RegistroRequest> getUserByEmail(@PathVariable String username) {
+        RegistroRequest user = usuarioService.findByEmail(username);
+
+      return ResponseEntity.ok(user);
+    }
+
+
+
 }

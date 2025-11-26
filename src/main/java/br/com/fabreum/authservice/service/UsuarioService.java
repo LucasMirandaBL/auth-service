@@ -5,9 +5,11 @@ import br.com.fabreum.authservice.model.Role;
 import br.com.fabreum.authservice.model.Usuario;
 import br.com.fabreum.authservice.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -18,15 +20,30 @@ public class UsuarioService {
     private final PasswordEncoder passwordEncoder;
 
     public Usuario registrarUsuario(RegistroRequest registroRequest) {
-        if (usuarioRepository.findByUsername(registroRequest.getUsername()).isPresent()) {
-            throw new IllegalStateException("Erro: Nome de usuário já está em uso!");
+        if (usuarioRepository.findByEmail(registroRequest.getEmail()).isPresent()) {
+            throw new IllegalStateException("Erro: Email já está em uso!");
         }
 
         Usuario usuario = new Usuario();
-        usuario.setUsername(registroRequest.getUsername());
+        usuario.setNome(registroRequest.getNome());
+        usuario.setEmail(registroRequest.getEmail());
         usuario.setPassword(passwordEncoder.encode(registroRequest.getPassword()));
-        usuario.setRoles(Set.of(Role.ROLE_CUSTOMER)); // Default role
+        usuario.setRoles(Set.of(registroRequest.getRole()));
 
         return usuarioRepository.save(usuario);
     }
+
+    public RegistroRequest findByEmail(String email) {
+
+        Usuario user = usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new IllegalStateException("Erro: Usuário não encontrado"));
+
+        RegistroRequest request = new RegistroRequest();
+        request.setId(user.getId());
+        request.setNome(user.getNome());
+        request.setEmail(user.getEmail());
+
+        return request;
+    }
+
 }

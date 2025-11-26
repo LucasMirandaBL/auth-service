@@ -49,4 +49,3 @@ app:
     expiration-ms: 3600000
     # Tempo de expiração do token de refresh (em milissegundos). 86400000 ms = 24 horas
     refresh-expiration-ms: 86400000
->>>>>>> 71be097 (Feat: Iniciando api de autenticação.)
